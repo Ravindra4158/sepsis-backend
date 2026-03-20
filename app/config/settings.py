@@ -25,6 +25,7 @@ class Settings(BaseSettings):
     MODEL_THRESHOLD_HIGH: int = 40
     MODEL_THRESHOLD_MODERATE: int = 20
     ALLOWED_ORIGINS: str = "http://localhost:3000,http://localhost:5173,https://sepsis-forentend.vercel.app"
+    CORS_ALLOW_ORIGIN_REGEX: str = r"^https://.*\.vercel\.app$"
 
     @property
     def cors_origins(self) -> List[str]:
